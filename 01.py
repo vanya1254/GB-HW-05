@@ -102,6 +102,5 @@ if bot_or_not == 'д':
 elif bot_or_not == 'б':
     user_name = (input('Как к вам обращаться? => '))
     name_winner = game_pve(user_name, amount_candies)
-    pass
 
 print(f'\n\nПоздравляем, {name_winner}, ты забираешь все конфеты!')                             # обидно конечно если боту проигрываешь, что его поздравляют, но решил так оставить
