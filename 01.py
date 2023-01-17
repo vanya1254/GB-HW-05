@@ -96,11 +96,11 @@ amount_candies = check_amount()
 bot_or_not = input('Игра с другом ("д") или ботом ("б") => ')
 
 if bot_or_not == 'д':
-    user_1_name = (input('Первый игрок, как к вам обращаться? => '))
-    user_2_name = (input('Второй игрок, как к вам обращаться? => '))
+    user_1_name = input('Первый игрок, как к вам обращаться? => ')
+    user_2_name = input('Второй игрок, как к вам обращаться? => ')
     name_winner = game_pvp(user_1_name, user_2_name, amount_candies)
 elif bot_or_not == 'б':
-    user_name = (input('Как к вам обращаться? => '))
+    user_name = input('Как к вам обращаться? => ')
     name_winner = game_pve(user_name, amount_candies)
 
 print(f'\n\nПоздравляем, {name_winner}, ты забираешь все конфеты!')                             # обидно конечно если боту проигрываешь, что его поздравляют, но решил так оставить
