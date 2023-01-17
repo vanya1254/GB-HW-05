@@ -38,11 +38,25 @@ def rle_list_to_string(rle_list):
         rle_string += ''.join(rle_list[i])
         
     return rle_string
+
+
+def rle_string_to_string(rle_string):
+    string = ''
     
+    for i in range(0, len(rle_string) - 1, 2):
+        string += int(rle_string[i]) * rle_string[i + 1]
+    
+    return string
+
 
 string_txt = read_txt('input.txt')
 
-list_rle = rle_compress_string_to_list(string_txt)
-string_rle = rle_list_to_string(list_rle)
-
-write_txt('output.txt', string_rle)
+if not string_txt[0].isdigit():
+    list_rle = rle_compress_string_to_list(string_txt)
+    string_rle = rle_list_to_string(list_rle)
+    write_txt('output.txt', string_rle)
+    # print(string_rle)
+else:
+    string_not_rle = rle_string_to_string(string_txt)
+    write_txt('output.txt', string_not_rle)
+    # print(string_not_rle)
