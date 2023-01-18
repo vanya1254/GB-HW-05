@@ -81,7 +81,7 @@ def game_pvp(username_1, username_2, gameboard_list = [i for i in range(1, 10)],
     user_2_figure = choice(list_X_O)
     print_gameboard(gameboard_list)
     
-    while condition and count_steps < 10:
+    while condition and count_steps < 4:
         count_steps += 1
 
         gameboard_list = user_steps(username_1, user_1_figure, gameboard_list)
